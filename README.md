@@ -7,6 +7,7 @@ Add each challenge in a different folder in the root directory.
 ## Format
 
 * Name of the challenge
+* Description
 * Flag
 * Hint (if necessary)
 * Files required
