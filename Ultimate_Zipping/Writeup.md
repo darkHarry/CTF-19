@@ -15,7 +15,8 @@ Keep finding the file type and keep changing it to other file types to finally g
 1.  Check file type using `file` command.
 2.  Unzipping the zip leads to other zips. Thus, we need to write a script to find how many zips are further compressed.
 3.  For this, we write -
-    `
+
+    ```
     #!/bin/bash
     unzip -o -qq flag.zip
 
@@ -26,12 +27,14 @@ Keep finding the file type and keep changing it to other file types to finally g
     mv $line $line.zip
     unzip \$line.zip
     done
-    done`
+    done
+    ```
 
 4.  Having done this, we run the script and find that the decompression breaks at a certain point. We note the filename at that point and find its `file` type. To our surprise, its bzip2 compressed file.
 
 5.  Now, when we bunzip2 the bzip2 file, we find that a new file with the same file type gets created. Thus, we write a script again.
-    `
+
+    ```
     #!/bin/bash
 
     while [1];
@@ -39,7 +42,7 @@ Keep finding the file type and keep changing it to other file types to finally g
     mv new new.xz
     bunzip2 new.xz
     done
-    `
+    ```
 
 6.  Now, similarly to make the process give stress and test patience, further we get xz and gzip files. Repeating the same process, we get the final zip that when unzipped asks for password.
 
