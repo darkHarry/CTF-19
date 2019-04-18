@@ -1,1 +1,4 @@
-You have a compiled C code (.o file) and no source. Your task is to use this file to guess a `key`. This key would then help you explore one of the gretest injection related vulnerabilities of legacy python. The flag is inside this vulnerable python code.
+You have a compiled C code (.o file) and no source.
+
+Your task is to use this file to guess a `key`. This key would then help you explore one of the greatest
+injection related vulnerabilities of legacy python. The flag is inside this vulnerable python code.
