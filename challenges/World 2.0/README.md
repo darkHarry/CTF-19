@@ -10,7 +10,9 @@ Flag for the challenge - `﻿OSD_CTF{ABC_DEF_MNO_JKL_TUV}`
 
 ### Hint
 
-I am your Best Friend
+ask your virtual friend who can speak, hear & see.
+
+
 
 
 
