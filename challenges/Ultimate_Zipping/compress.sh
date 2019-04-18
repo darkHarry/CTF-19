@@ -4,7 +4,7 @@
 declare -a extension=("O" "S" "D" "_" "C" "T" "F" "{" "T" "a" "l" "k" "I" "s" "C" "h" "e" "a" "p" "!" "}")
 
 # first zip with the flag
-echo "OSD_CTF{@Str355C0mpr355}" > flag.txt
+echo "OSD_CTF{sTreSsC0mPrEsS}" > flag.txt
 zip -P hi5rockyou flag.zip flag.txt
 rm flag.txt
 mv flag.zip flag.#
