@@ -8,16 +8,21 @@ Dig & Conquer
 
 Flag for the challenge - `OSD_CTF{@Str355C0mpr355}`
 
-### Hint \$ Description
+### Hint
 
-Keep finding the file type and keep changing it to other file types to finally get a zip. Use a password cracker to find the password of the zip file with the help of dictionary attack.Firstly, the user gets a file with a big file name which appears as a flag but is not.Having known that its not,
+Keep finding the file type and keep changing it to other file types to finally get a zip. Use a password cracker to find the password of the zip file with the help of dictionary attack.
+
+### Description
+
+Firstly, the user gets a file with a big file name which appears as a flag but is not.Having known that its not,
 
 1.  Check file type using `file` command.
-2.  Unzipping the zip leads to other zips. Thus, we need to write a script to find how many zips are further compressed.
+2.  Unzipping the zip leads to other zips. Thus, we need to write a script to find how many zips are further compressed and finally get the point at which unzipping breaks since that may contain the flag.
 3.  For this, we write -
 
     ```
     #!/bin/bash
+    mv <big file name> flag.zip
     unzip -o -qq flag.zip
 
     while [ 1 ];
@@ -30,9 +35,9 @@ Keep finding the file type and keep changing it to other file types to finally g
     done
     ```
 
-4.  Having done this, we run the script and find that the decompression breaks at a certain point. We note the filename at that point and find its `file` type. To our surprise, its bzip2 compressed file.
+4.  Having done this, we run the script and find that the decompression breaks at a certain point. We note the filename at that point and find its `file` type by choosing the file with least size using `ls -l` command. To our surprise, its bzip2 compressed file.
 
-5.  Now, when we bunzip2 the bzip2 file, we find that a new file with the same file type gets created. Thus, we write a script again.
+5.  Now, when we bunzip2 the bzip2 file, we find that a new file `new` with the same file type gets created. Thus, we write a script again.
 
     ```
     #!/bin/bash
@@ -48,7 +53,7 @@ Keep finding the file type and keep changing it to other file types to finally g
 
 7.  To crack the password, we use `fcrackzip` which is a cracking tool made in C. We will crack the password using the rockyou.txt which can be found on machine by `locate rockyou.txt`. On using the command, `fcrackzip -D -u -p rockyou.txt new.zip`, we get the password of the zip file as `hi5rockyou`.
 
-8.  On opening the zip, we find the `flag.txt` and thus the flag.
+8.  On opening the zip using the password, we find the `flag.txt` and thus the flag.
 
 ### File Required
 
