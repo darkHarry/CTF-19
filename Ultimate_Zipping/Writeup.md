@@ -39,8 +39,8 @@ Keep finding the file type and keep changing it to other file types to finally g
 
     while [1];
     do
-    mv new new.xz
-    bunzip2 new.xz
+    mv new new.bz2
+    bunzip2 new.bz2
     done
     ```
 
