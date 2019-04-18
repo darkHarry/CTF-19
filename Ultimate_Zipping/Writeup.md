@@ -20,7 +20,7 @@ Firstly, the user gets a file with a big file name which appears as a flag but i
 2.  Unzipping the zip leads to other zips. Thus, we need to write a script to find how many zips are further compressed and finally get the point at which unzipping breaks since that may contain the flag.
 3.  For this, we write -
 
-    ```
+    ```shell
     #!/bin/bash
     mv <big file name> flag.zip
     unzip -o -qq flag.zip
@@ -39,7 +39,7 @@ Firstly, the user gets a file with a big file name which appears as a flag but i
 
 5.  Now, when we bunzip2 the bzip2 file, we find that a new file `new` with the same file type gets created. Thus, we write a script again.
 
-    ```
+    ```shell
     #!/bin/bash
 
     while [1];
