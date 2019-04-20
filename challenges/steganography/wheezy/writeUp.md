@@ -3,14 +3,14 @@
 ## About
 This is a basic challenge just to test your knowledge of Reconnaissance.
 
-## Description 
+## Description
 You have been given an image. From that image you have to find the flag.
 
 ### Step 1
 Check the metadata of the image.
 ```strings osdc.jgp```
-You must have found lots of strings that are in the image. Now check for the weirdest string. You must have noticed a long hashed string like this 
-```U2FsdGVkX19UbEhmPf1edJd8ay8JWHy2pP61cd39FzcMOkLiD/EVRG0C3pLT8r30```. But as of know we don't know what is this. It can be a encrypted string for it can be the flag also. 
+You must have found lots of strings that are in the image. Now check for the weirdest string. You must have noticed a long hashed string like this
+```U2FsdGVkX19UbEhmPf1edJd8ay8JWHy2pP61cd39FzcMOkLiD/EVRG0C3pLT8r30```. But as of know we don't know what is this. It can be a encrypted string for it can be the flag also.
 Obviously, this can't be the flag, but you can check though. Now lets move to next step for collecting more information.
 
 ### Step 2
@@ -19,7 +19,7 @@ Now lets collect more information about the image.
 We will ```exiftool``` to check for more metadata of the flag.
 Install ```exiftool``` with the following command
 ``` sudo apt install exiftool```
-Now do ```exiftool osdc.jpg```  
+Now do ```exiftool osdc.jpg```
 Metadata of the image will be displayed.
 
 ### Step 3
