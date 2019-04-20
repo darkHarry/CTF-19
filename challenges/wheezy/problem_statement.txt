@@ -1,0 +1,1 @@
+There was a club called 'OSDC' in Andy's college. Andy wants to join that club. The leader of the club asked him to bring the flag, if he want's to join the club. Andy tried hard but he failed. Now, wheezy (Andy's toy friend) wants to help him. Assume that you are wheezy. Thus help Andy to find the flag. 
