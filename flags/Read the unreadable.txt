@@ -1,0 +1,4 @@
+### Bin Exp 1
+#### Read the unreadable
+* Run ```sudo sysctl -w kernel.randomize_va_space=0``` on the server/docker-host then run the ```docker run -p 2525:2525 <image-name>```
+* flag OSD_CTF{f0rm4T_sTr1nG_4ttacK_l333t}

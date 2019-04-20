@@ -1,0 +1,2 @@
+Run ```sudo sysctl -w kernel.randomize_va_space=0``` on the server/docker-host then run the ```docker run -p 2525:2525 <image-name>```
+OSD_CTF{bUff3R_0VerFlOw_1s_4Wes0m3}
